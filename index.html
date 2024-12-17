@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+    <style>
+        /* Fondo de imagen */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('imagenes/fondo.avif'); /* Ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        /* Botón decorativo */
+        button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #e84118;
+            transform: scale(1.05);
+        }
+
+        /* Contenedor principal */
+        section {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para contraste */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>VISITAR MUSEOS DE ARTE Y CULTURA</h1>
+        <!-- Botón de Logout -->
+      
+        <!-- Botones para visitar museos -->
+        <button id="visitMuseum1">Visitar Museo 1</button>
+        <button id="visitMuseum2">Visitar Museo 2</button>
+        <button id="logout">Salir</button>
+    </section>
+
+    <script>
+        // Funcionalidad del botón Logout
+        const logout = document.querySelector('#logout');
+        logout.addEventListener('click', () => {
+            alert('Hasta pronto!');
+            localStorage.removeItem('login_success');
+            window.location.href = 'login.html';
+        });
+
+        // Funcionalidad del botón Visitar Museo 1
+        const visitMuseum1 = document.querySelector('#visitMuseum1');
+        visitMuseum1.addEventListener('click', () => {
+            window.location.href = 'https://www.artsteps.com/view/5f727d027e33e60e965d2ed6'; // Link para Museo 1
+        });
+
+        // Funcionalidad del botón Visitar Museo 2
+        const visitMuseum2 = document.querySelector('#visitMuseum2');
+        visitMuseum2.addEventListener('click', () => {
+            window.location.href = 'https://thehackroomuamx.wixsite.com/website/museo-virtual'; // Link para Museo 2
+        });
+    </script>
+</body>
+</html>

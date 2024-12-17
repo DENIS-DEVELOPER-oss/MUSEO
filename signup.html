@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        /* Fondo de imagen */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('imagenes/fondo2.jpg'); /* Ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        /* Contenedor del formulario */
+        section {
+            background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #00a8ff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0097e6;
+        }
+
+        a {
+            color: #ffa502;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #e1a232;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Registro</h2>
+        <form id="signupForm">
+            <label for="name">Nombre</label>
+            <input type="text" placeholder="..." id="name" required autofocus>
+            <label for="email">Mail</label>
+            <input type="email" placeholder="..." id="email" required>
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="..." id="password" required>
+            <input type="submit" value="Registro">
+        </form>
+        <p>Ya tienes una cuenta? <a href="login.html">Login</a></p>
+    </section>
+    <script src="js/signup.js"></script>
+</body>
+</html>
